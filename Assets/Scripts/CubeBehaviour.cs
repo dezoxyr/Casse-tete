@@ -90,6 +90,8 @@ public class CubeBehaviour : MonoBehaviour
                     if (m_code == 1)
                     {
                         m_code = 3;
+                        MeshRenderer renderer = m_Hit.collider.gameObject.GetComponent<MeshRenderer>();
+                        renderer.material.SetColor("_Color", Color.red);
                     }
                     else { m_code = 1; }
 
@@ -99,6 +101,8 @@ public class CubeBehaviour : MonoBehaviour
                     if (m_code == 3)
                     {
                         m_code = 4;
+                        MeshRenderer renderer = m_Hit.collider.gameObject.GetComponent<MeshRenderer>();
+                        renderer.material.SetColor("_Color", Color.red);
                     }
                     else { m_code = 1; }
 
@@ -108,6 +112,8 @@ public class CubeBehaviour : MonoBehaviour
                     if (m_code == 4)
                     {
                         m_code = 2;
+                        MeshRenderer renderer = m_Hit.collider.gameObject.GetComponent<MeshRenderer>();
+                        renderer.material.SetColor("_Color", Color.red);
                     }
                     else { m_code = 1; }
                 }
@@ -116,6 +122,8 @@ public class CubeBehaviour : MonoBehaviour
                     if (m_code == 2)
                     {
                         m_Action = 5;
+                        MeshRenderer renderer = m_Hit.collider.gameObject.GetComponent<MeshRenderer>();
+                        renderer.material.SetColor("_Color", Color.red);
                     }
                     else { m_code = 1; }
                 }
@@ -137,8 +145,6 @@ public class CubeBehaviour : MonoBehaviour
                     cube.SetActive(false);
                     endMenu.SetActive(true);
                     medal.SetActive(true);
-                    /*Animator anim = m_Hit.collider.gameObject.GetComponent<Animator>();
-                    anim.Play("Start");*/
                 }
 
             }
